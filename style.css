@@ -4,9 +4,12 @@
     --tertiary-color: #f0f9ff;
     --primary-color: #e2e8f0;
     --avatar-background:#c78902;
-    --icon-size:clamp(10px, 20%, 30px);
+    --card-border-idle:#f1d639;
+    --card-border-hover:#66f353;
+    --icon-size:clamp(30px, 20%, 40px);
     --avatar-size: clamp(20px, 20%, 60px);
     --font-family: 'IBM Plex Mono', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 body{
@@ -19,7 +22,10 @@ body{
     width: var(--icon-size); 
 }
 .icon-big{
-    width: calc(var(--icon-size) + 2vw);
+    width: calc(var(--icon-size) + 2vh);
+}
+.icon-small{
+    width: calc(var(--avatar-size) - 8%);
 }
 .profile-icon{
     width: var(--avatar-size);
@@ -28,7 +34,7 @@ body{
     margin: 5px;
 }
 .profile-big{
-    width: calc(var(--avatar-size) + 50%);
+    width: calc(var(--avatar-size) + 30%);
     margin-left: 20px;
 }
 
@@ -36,7 +42,7 @@ body{
 /* App container */
 .container{
     display:grid;
-    grid-template: 1fr 5fr / 1fr 5.5fr;
+    grid-template: 1fr 5fr / 1fr 5fr;
     height: 100vh;
 }
 
@@ -120,7 +126,7 @@ input:focus{
         background-color: var(--secondary-color);
         border: none;
         border-radius: 20px;
-        color: whitesmoke;
+        color: var(--tertiary-color);
         font-size: clamp(20px, 100%, 50px);
         transition: 100ms ease-in-out;
     }:hover{background-color: aqua;
@@ -176,15 +182,52 @@ main{
     background-color:var(--primary-color);
     grid-area: 2 / 2 / 3 / span;
 
+    font-family: var(--font-family);
+
     display:grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 2%;
     margin: 0;
-    padding: 0;
+    padding: 2%;
 }
 /* sub-components of content area */
 .content{
     grid-area: 1 / 1 / -1 / 2;
+
+    display: grid;
+    grid-template: 1fr 1fr 1fr/ 1fr 1fr;
+    gap:3vh;
+    
+
+}
+/* content card components */
+.project-card{
+    background-color:var(--tertiary-color);
+    border-left: 6px solid var(--card-border-idle);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    padding: 5%;
+    box-shadow: 0 5px 5px darkgrey;
+    >.card-title{
+        font-weight: 700;
+        align-self: center;
+        font-size: medium;
+    }
+    >.card-content{
+        font-size:small;
+    }
+    >p{margin:2px;}
+    >.card-buttons{
+        display:flex;
+        justify-content:end;
+    }
+    transition: 200ms ease-in-out;
+}
+.project-card:hover{
+    scale:110%;
+    box-shadow: 0 10px 10px darkgrey;
 }
 .announcements{
     grid-area: 1 / 2 / 1 / -1;
