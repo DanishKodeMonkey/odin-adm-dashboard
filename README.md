@@ -15,3 +15,9 @@ I am to follow a design layout presented for the project and make it from scratc
 The main purpose of the exercise is the practice the use of css grids. To that extend, I am limited to mainly use CSS grid to create the layout of the page, but that does not mean that I can't use flexbox at all.
 
 This is, in essence, a practice in forming a website using CSS grid, and the constructive approach of doing so.
+
+Furthermore, this is a great opportunity to experiment with the power of custom properties, setting a general color theme and other variables to streamline the overall look of the design.
+
+## Check it out!
+
+As always, give it a look [here!](https://danishkodemonkey.github.io/odin-adm-dashboard/)
