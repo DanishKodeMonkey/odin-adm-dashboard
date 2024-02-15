@@ -42,8 +42,8 @@ body{
 /* App container */
 .container{
     display:grid;
-    grid-template: 1fr 5fr / 1fr 5fr;
-    height: 100vh;
+    grid-template: 20vh 80vh / 1fr 5fr;
+    height: 100%;
 }
 
 
@@ -142,6 +142,9 @@ nav{
 
     display:grid;
     grid-template-rows: 1fr 10fr;
+    overflow:hidden;
+    color: var(--tertiary-color);
+        .icon-big, .icon{filter:invert()}
     
 }
 /* sub-components of sidebar */
@@ -157,6 +160,7 @@ nav{
     grid-row: 2 / -1;
     display: flex;
     flex-direction: column;
+
 }
 ul{
     padding: 0;
@@ -171,6 +175,7 @@ li{
     font-weight: 600;
     scale:90%;
     transition: 100ms ease-in-out;
+
 }
 li:hover{
 background-color: #9cd8fd;
@@ -186,7 +191,7 @@ main{
 
     display:grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 45% 55%;
     gap: 2%;
     margin: 0;
     padding: 2%;
@@ -196,9 +201,8 @@ main{
     grid-area: 1 / 1 / -1 / 2;
 
     display: grid;
-    grid-template: 30px 1fr 1fr 1fr/ 1fr 1fr;
-    gap:2vh;
-    
+    grid-template: 20px 22vh 22vh 22vh/ 1fr 1fr;
+    gap: 2vh;
 
 }
 .content-title{
@@ -209,8 +213,8 @@ main{
     background-color:var(--tertiary-color);
     border-left: 6px solid var(--card-border-idle);
     border-radius: 10px;
-    display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
+        display: grid;
+        grid-template-rows: 0.1fr 1fr 0.2fr;
     padding: 5%;
     box-shadow: 0 5px 5px darkgrey;
     >.card-title{
@@ -220,6 +224,7 @@ main{
     }
     >.card-content{
         font-size:small;
+        overflow: hidden;
     }
     >p{margin:2px;}
     >.card-buttons{
@@ -234,9 +239,63 @@ main{
 }
 .announcements{
     grid-area: 1 / 2 / 1 / -1;
+    
+    display:flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+.announcements-container{
+    background-color: var(--tertiary-color);
+    border-radius: 10px;
+    padding: 5%;
+    box-shadow: 0 5px 5px darkgrey;
+    overflow:scroll;
+
+}
+.announcement-card{
+    font-size: smaller;
+    >.announcement-title{
+        font-weight: 700;
+    }
+    >.announcement-content{
+        font-size: small;
+        font-weight: 500;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+    }
 }
 
 .trending{
     grid-area: 2 / 2 / -1 / -1;
+    display:flex;
+    flex-direction: column;
+    gap: 1vh;
 }
-
+.trending-container{
+    background-color: var(--tertiary-color);
+    border-radius: 10px;
+    padding: 5%;
+    height:80%;
+    box-shadow: 0 5px 5px darkgrey;
+    overflow:scroll;
+}
+.trending-card{        
+    display: grid;
+    grid-template: 0.4fr 1fr / 0.4fr 1fr;
+    margin-bottom: 10%;
+    >img{
+        width: 60%;
+        grid-area: 1 / 1 / -1 / 1
+    }
+    >.profile-id{
+        font-size: small;
+        font-weight: 500;
+        grid-area: 1 / 2 / 1 / 3
+    }
+    >p{
+        margin:0px;
+    }
+    >.trending-title{
+        font-size: small;
+        grid-area: 2 / 2  
+    }
+}
