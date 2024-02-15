@@ -196,10 +196,13 @@ main{
     grid-area: 1 / 1 / -1 / 2;
 
     display: grid;
-    grid-template: 1fr 1fr 1fr/ 1fr 1fr;
-    gap:3vh;
+    grid-template: 30px 1fr 1fr 1fr/ 1fr 1fr;
+    gap:2vh;
     
 
+}
+.content-title{
+    grid-area: 1/ 1 / 1 / -1
 }
 /* content card components */
 .project-card{
