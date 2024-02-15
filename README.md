@@ -10,6 +10,8 @@ The odin admin dashboard is a scratch-made admin dashboard, that has been made u
 
 I am to follow a design layout presented for the project and make it from scratch to fit as closely to the presented design as possible.
 
+Seeing as this is an exercise in design, the scope is limited to HTML and CSS, as such this is more of a concept demo than any functional page... maybe some other time!
+
 ## What is involved?
 
 The main purpose of the exercise is the practice the use of css grids. To that extend, I am limited to mainly use CSS grid to create the layout of the page, but that does not mean that I can't use flexbox at all.
